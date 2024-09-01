@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word</title>
+</head>
+<body>
+    <script>
+        let n = Number(prompt("Enter the number"));
+
+        if(n<0 || n>1000){
+            document.write("Out Of Range");
+        }
+        else if(isNaN(n)){
+            document.write("enter valid input");
+        }
+        else if(n==null){
+            document.write("don't enter a null no");
+        }
+        else{
+            let units =['zero','one','two','three','four','five','six','seven','eight','nine'];
+            let tens = [" "," ","twenty","thirty","fourirty","fifty","sixty","seventy","eighty","ninty"];
+            let teens =['ten','eleven','twelve','thirteen','fourteen',"fifteen","sixteen","seventeen","eighteen","nineteen"];
+            
+            let ans = " ";
+            
+            if(n>=100){
+                ans+= units[Math.floor(n/100)]+ "hundred";
+                n=n%100;
+            }
+            if(n>=20){
+                ans+= tens[Math.floor(n/10)]+ " ";
+                n=n%10;
+            }
+            else if(n>=10){
+                ans+= tens[Math.floor(n-10)]+ " ";
+                n=0;
+            }
+            if(n>0){
+                ans+= units[n];
+            }
+            document.write("result : "+ans);
+        }
+    </script>
+</body>
+</html>

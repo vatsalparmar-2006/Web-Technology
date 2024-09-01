@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = new Array();
+        var size = parseInt(prompt("Enter the Size Of an Array:"));
+
+        for (let i = 0; i < size; i++) {
+            array[i] = parseInt(prompt("Enter the Element no" + i + ":"));
+        }
+
+        document.write("Old: " + array);
+        document.write("<br>");
+
+        let method = parseInt(prompt("Enter 1 for push, 2 for pop, 3 for unshift, 4 for shift: "));
+
+        if (method == 1) {
+            let add = parseInt(prompt(array + "\nEnter the Element you want to add:"));
+            array.push(add);
+        } else if (method == 2) {
+            array.pop();
+        } else if (method == 3) {
+            let addf = parseInt(prompt(array + "\nEnter the Element you want to add in first:"));
+            array.unshift(addf);
+        } else if (method == 4) {
+            array.shift();
+        }
+
+        document.write("New: " + array);
+    </script>
+</body>
+
+</html>

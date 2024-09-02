@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply</title>
+</head>
+<body>
+    <script>
+
+    //2-digit number and then separate these 2 digits, then multiply ƒrst digit by itself for second digit times.
+    // ex. 25 = 2 5 = 2*2*2*2*2 = 32
+
+        let n = Number(prompt("Enter two digit  number"));
+
+        let ans=1;
+
+        let firstDigit = parseInt(n/10) ;
+        let lastDigit = n%10 ;
+
+        for(let i=1 ; i<=lastDigit ; i++){
+            ans *= firstDigit;
+        }
+
+        alert("Answer is "+ans);
+    </script>
+</body>
+</html>

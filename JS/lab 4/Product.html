@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        arr = [
+            {
+                pName: "harsh goggles",
+                price: "free",
+                damage: "noDamage",
+                detail: "red color with blue shining",
+            },
+            {
+                pName: "bakrushn site",
+                price: "100cr",
+                damage: "usable",
+                detail: "theshortnewsofindia.com",
+            },
+            {
+                pName: "om laptop",
+                price: "150",
+                damage: "nodamage",
+                detail: "dell g15",
+            },
+            {
+                pName: "glucose",
+                price: "225",
+                damage: "nodamage",
+                detail: "tang",
+            },
+        ];
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`<div class="card" style="width: 18rem;">
+                      <img src="https://tse3.mm.bing.net/th?id=OIP.WCCq2nZelTZuFIRbJF7AuAHaEK&pid=Api&P=0&h=220" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">${arr[i].pName}</h5>
+                        <p class="card-text">${arr[i].price}<br>${arr[i].damage}<br>${arr[i].detail}<br>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                      </div>
+                    </div>`);
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

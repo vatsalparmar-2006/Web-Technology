@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body>
+    <script type="text/javascript">
+    	let n = Number(prompt("Enter  the number "));
+        let a,count=0,sum=0,temp=1;
+
+        a=n;
+
+        while(n!=0){
+            n = parseInt(n/10);
+            count++ ;
+        }
+
+        n=a;
+        while(n!=0){
+            rem = n%10;
+            for(let i=1 ; i<=count ; i++){
+                temp = temp*rem ;
+            }
+            sum = sum + temp;
+            n = parseInt(n/10);
+            temp=1;
+        }
+
+        if(sum==a){
+            alert("Number is Armstrong");
+        }
+        else{
+            alert("Number is not Armstrong");
+        }
+    </script>
+</body>
+</html>

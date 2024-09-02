@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Crud</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button id="btn" onclick="addAndEdit()"></button>
+    <div id="display"></div>
+
+    <script>
+        a = [];
+        let index;
+
+        let name = document.getElementById("name");
+        let btn = document.getElementById("btn");
+        btn.innerHTML = "ADD"
+
+        function addAndEdit(){
+            if(btn.innerHTML == 'ADD'){
+                a.push(name.value);
+                document.getElementById('name').value = " ";
+                display();
+            }
+            else{
+                a[index] = name.value;
+                document.getElementById('name').value = " ";
+                display();
+                btn.innerHTML = "Add";
+            }
+        }
+
+        function del(i){
+            a.splice(i,1);
+            display();
+        }
+
+        function edit(i){
+            let name = document.getElementById('name');
+            name.value = a[i];
+            btn.innerHTML = "Edit";
+            index = i;
+        }
+
+        function display(){
+            let display = document.getElementById("display");
+            display.innerHTML = " ";
+            for(i=0; i<a.length; i++){
+                display.innerHTML += a[i] + "<button onclick='edit("+i+")''>Edit</button>" + "<button onclick='del("+i+")'>Delete</button>" + "</br>"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty</title>
+</head>
+
+<body>
+    <script>
+        var array = new Array();
+        var array = [{
+            FacultyName: "Arjun Bala",
+            FacultyID: "123",
+            Subject: "WT"
+        },
+        {
+
+            FacultyName: "Pradyuman Jadeja",
+            FacultyID: "124",
+            Subject: "DS"
+        },
+        {
+            FacultyName: "Dixita Ma'am",
+            FacultyID: "125",
+            Subject: "DBMS"
+        }]
+
+
+        document.write("<table border=1>");
+        document.write("<tr>");
+        document.write("<th>")
+        document.write("Faculty Name")
+        document.write("</th>")
+        document.write("<th>")
+        document.write("Faculty ID")
+        document.write("</th>")
+        document.write("<th>")
+        document.write("Subject")
+        document.write("</th>")
+        document.write("</tr>");
+
+
+        for (let i = 0; i < array.length; i++) {
+
+            document.write("<tr>");
+            document.write("<td>");
+            document.write(array[i].FacultyName);
+            document.write("</td>");
+            document.write("<td>");
+            document.write(array[i].FacultyID);
+            document.write("</td>");
+            document.write("<td>");
+            document.write(array[i].Subject);
+            document.write("</td>");
+            document.write("</tr>");
+
+
+        }
+        document.write("</table>");
+
+
+    </script>
+</body>
+
+</html>
